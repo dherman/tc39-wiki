@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML+RDFa 1.0//EN"
+    "http://www.w3.org/MarkUp/DTD/xhtml-rdfa-1.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en"
+      xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+      xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+      xmlns:dc="http://purl.org/dc/elements/1.1/"
+      xmlns:foaf="http://xmlns.com/foaf/0.1/">
+  
+  <head>
+    
+    
+      
+        <meta http-equiv="Content-Type" content="application/xhtml+xml; charset=UTF-8" />
+      
+      
+      <title>
+        ECMAScript Wiki » 
+        About Harmony
+      </title>
+      
+      
+        <!-- YUI CSS reset, fonts, base -->
+        <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
+        
+        <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+      
+      
+      
+      
+      
+        
+      
+    <script type="text/javascript" src="http://use.typekit.com/ruc1ksw.js"></script>
+    <script type="text/javascript">try{Typekit.load();}catch(e){}</script>
+    
+  </head>
+  
+  <body >
+    
+      
+      
+        
+          
+  
+    <div id="breadcrumbs-container">
+    <ol id="breadcrumbs">
+      
+        <li class="crumb-0 not-last">
+          
+            <a href="../">index</a>
+          
+        </li>
+      
+        <li class="crumb-1 not-last">
+          
+            <a href="./">harmony</a>
+          
+        </li>
+      
+        <li class="crumb-2 last">
+          
+            about
+          
+        </li>
+      
+    </ol> <!-- ol#breadcrumbs -->
+    </div> <!-- div#breadcrumbs-container -->
+  
+
+        
+      
+      
+      <div id="content">
+      <div id="content-body">
+        
+        
+        
+        <h1>About Harmony</h1>
+<p>TC39 uses what it calls the "Harmony" process for standardizing JavaScript. Individuals or small groups work as <em>champions</em> of a feature, and do design work independently of the rest of the group. When their design is ready for initial review, they create a <a href="../strawman">strawman</a> proposal. Strawmen that are considered valuable are considered to have achieved <em>harmony</em>, at which point they are promoted to a <a href="./">harmony</a> proposal and worked on further. Harmony proposals are not guaranteed to be accepted in the language. They indicate that the group has consensus on the general approach of the proposal. But they still require more work in order to make <em>final</em> status, at which point they become part of the standard.</p>
+<h2>Goals</h2>
+<p>These goals were agreed on at a meeting in July, 2008:</p>
+<ol>
+<li>Be a better language for writing:<ul>
+<li>complex applications;</li>
+<li>libraries (possibly including the DOM) shared by those applications;</li>
+<li>code generators targeting the new edition.</li>
+</ul>
+</li>
+<li>Switch to a testable specification, ideally a definitional interpreter hosted mostly in ES5.</li>
+<li>Improve interoperation, adopting <em>de facto</em> standards where possible.</li>
+<li>Keep versioning as simple and linear as possible.</li>
+<li>Support a statically verifiable, object-capability secure subset.</li>
+</ol>
+<h2>Means</h2>
+<ol>
+<li>Minimize the additional semantic state needed beyond ES5.</li>
+<li>Provide syntactic convenience:<ul>
+<li>for good abstraction patterns;</li>
+<li>for high integrity patterns;</li>
+<li>defined by desugaring into kernel semantics.</li>
+</ul>
+</li>
+<li>Remove (via opt-in versioning or pragmas) confusing or troublesome constructs.<ul>
+<li>Harmony builds on ES5 strict mode to avoid too many modes.</li>
+</ul>
+</li>
+<li>Support virtualizability, allowing for host object emulation.</li>
+</ol>
+<h2>Themes</h2>
+<ol>
+<li>Modularity, or how to delineate units of source code to hide the insides from outside users</li>
+<li>Isolation, to prevent effects from propagating, or allow them only through certain references<ul>
+<li>Zero-authority maker-style modules</li>
+<li>Other combinations of primordials/contexts/builtins with modules</li>
+<li>Lack of isolation in browsers: multiple connected global objects</li>
+</ul>
+</li>
+<li>Virtualization, for stratified guest code hosting, bridging disjoint object systems, and in particular emulating host objects<ul>
+<li>Proxies</li>
+<li>Weak references or Ephemerons</li>
+</ul>
+</li>
+<li>Control Effects, for simpler iteration and state-machine code<ul>
+<li>Delimited continuations</li>
+<li>Generators, iterators</li>
+</ul>
+</li>
+<li>Library/Tool Enabling, so the TC39 committee is not blocking library evolution<ul>
+<li>Object.hashcode</li>
+<li>Byte arrays of some kind</li>
+<li>Value types (for Decimal, etc.).</li>
+</ul>
+</li>
+<li>Language Reform, the “better carrots” needed to lead users away from bad forms<ul>
+<li>let, const, function in block scope</li>
+<li>Default and rest parameters, the spread operator</li>
+<li>Destructuring</li>
+</ul>
+</li>
+<li>Versioning, since new syntax is part of Harmony.<ul>
+<li>This theme is about minimizing opt-in versioning, easing migration, and future-proofing for the next edition.</li>
+</ul>
+</li>
+</ol>
+        
+        
+        
+        
+        <hr class="clear" />
+      </div> <!-- div#content-body -->
+      </div> <!-- div#content -->
+      
+      
+      <div id="footer">
+      <div id="footer-body">
+        <p>
+          
+            ECMAScript Wiki —
+          
+          Powered by <a href="http://markdoc.org/">Markdoc</a> —
+          Source at <a href="http://github.com/dherman/tc39-wiki">GitHub</a>
+        </p>
+      </div>
+      </div>
+      
+    
+    
+    
+    <hr class="clear" />
+  </body>
+</html>
