@@ -1,0 +1,9 @@
+wiki-name: "ECMAScript Wiki"
+wiki-source: http://github.com/dherman/tc39-wiki
+
+use-default-static: false
+use-default-templates: false
+
+markdown:
+  extensions:
+    - codehilite
