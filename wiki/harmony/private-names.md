@@ -1,8 +1,10 @@
 # Private names
 
+*Champions*: [Dave Herman](/contributors/dave-herman), [Allen Wirfs-Brock](/contributors/allen-wirfs-brock)
+
 Private names are a new, special kind of object that can be used as an unguessable property name in objects. You can use scope to control access to them so only the parts of your program that you give access to the name object can get at properties with that name.
 
-  * [private names proposal](proposals/private-names)
+  * [detailed proposal](details/private-names)
 
 ## Private names for information hiding
 
