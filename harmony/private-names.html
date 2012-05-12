@@ -24,7 +24,7 @@
         <link rel="stylesheet" type="text/css" href="http://yui.yahooapis.com/combo?3.0.0/build/cssreset/reset-min.css&amp;3.0.0/build/cssfonts/fonts-min.css&amp;3.0.0/build/cssbase/base-min.css" media="screen, projection" />
         
         <link rel="stylesheet" type="text/css" href="../media/css/style.css" media="screen, projection" />
-        <link rel="stylesheet" type="text/css" href="../media/css/pygments.css" media="screen, projection" />
+        <link rel="stylesheet" type="text/css" href="../media/css/pygments-cs.css" media="screen, projection" />
       
       
       
@@ -79,26 +79,14 @@
         
         
         <h1>Private names</h1>
+<p><em>Champions</em>: <a href="../contributors/dave-herman">Dave Herman</a>, <a href="../contributors/allen-wirfs-brock">Allen Wirfs-Brock</a></p>
 <p>Private names are a new, special kind of object that can be used as an unguessable property name in objects. You can use scope to control access to them so only the parts of your program that you give access to the name object can get at properties with that name.</p>
 <ul>
-<li><a href="proposals/private-names">private names proposal</a></li>
+<li><a href="details/private-names">detailed proposal</a></li>
 </ul>
 <h2>Private names for information hiding</h2>
 <p><strong>Example:</strong> a widely-used library might wish to provide objects that hide their implementation details so that clients don't accidentally rely on them.</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nx">module</span> <span class="nx">query</span> <span class="p">{</span>
+<div class="codehilite"><pre><span class="nx">module</span> <span class="nx">query</span> <span class="p">{</span>
     <span class="kr">import</span> <span class="nx">Name</span> <span class="nx">from</span> <span class="s2">&quot;@name&quot;</span><span class="p">;</span>
 
     <span class="nx">let</span> <span class="nx">elements</span> <span class="o">=</span> <span class="k">new</span> <span class="nx">Name</span><span class="p">();</span>
@@ -113,33 +101,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
-</td></tr></table>
+
 
 <h2>Private names for tamper resistance</h2>
 <p><strong>Example:</strong> an online game might provide a <code>Player</code> class that represents a player in the game, and encapsulates access to the player's score. To prevent tampering with the player's score, it can be made private by giving the score property a private name:</p>
-<table class="codehilitetable"><tr><td class="linenos"><div class="linenodiv"><pre> 1
- 2
- 3
- 4
- 5
- 6
- 7
- 8
- 9
-10
-11
-12
-13
-14
-15
-16
-17
-18
-19
-20
-21
-22
-23</pre></div></td><td class="code"><div class="codehilite"><pre><span class="nx">module</span> <span class="nx">player</span> <span class="p">{</span>
+<div class="codehilite"><pre><span class="nx">module</span> <span class="nx">player</span> <span class="p">{</span>
     <span class="kr">import</span> <span class="nx">Name</span> <span class="nx">from</span> <span class="s2">&quot;@name&quot;</span><span class="p">;</span>
 
     <span class="c1">// unexported so no one else has access to it</span>
@@ -163,7 +129,6 @@
     <span class="c1">// etc...</span>
 <span class="p">}</span>
 </pre></div>
-</td></tr></table>
         
         
         
