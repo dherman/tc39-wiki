@@ -8,7 +8,7 @@ Private names are a new, special kind of object that can be used as an unguessab
 
 **Example:** a widely-used library might wish to provide objects that hide their implementation details so that clients don't accidentally rely on them.
 
-    #!javascript
+    :::javascript
     module query {
         import Name from "@name";
 
@@ -28,7 +28,7 @@ Private names are a new, special kind of object that can be used as an unguessab
 
 **Example:** an online game might provide a `Player` class that represents a player in the game, and encapsulates access to the player's score. To prevent tampering with the player's score, it can be made private by giving the score property a private name:
 
-    #!javascript
+    :::javascript
     module player {
         import Name from "@name";
     

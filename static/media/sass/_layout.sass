@@ -141,9 +141,10 @@ img.logo
 // Code blocks
 
 =codeblock
-  :border-left 1px solid gray
+  //:border-left 1px solid gray
   :margin-bottom 13px
   :margin-left 30px
+  :margin-right 30px
   :padding-left 12px
 
 pre
@@ -151,19 +152,22 @@ pre
 
 .codehilite
   +codeblock
+  //:box-shadow 0px 0px 4px rgba(0, 0, 0, 0.18)
+  //:background-color rgb(253, 246, 227)
   pre
     :border none
     :margin 0
-    :padding 0
+    :padding 12px 12px 12px 0 //0
 
 .codehilitetable
   :margin-left 0
   :padding-left 0
   :margin-top 2em
   :margin-bottom 2em
+  :box-shadow 0px 0px 4px rgba(0, 0, 0, 0.18)
   tr td
     :border none
-    :padding 3px 5px 0 5px
+    :padding 10px // 3px 5px 0 5px
     &.linenos
       :background-color #f6f6f6
       :border-right 1px solid gray
@@ -175,6 +179,7 @@ pre
         :border none
         :margin 0
         :padding 0
+        :color #aaaaaa
     &.code
       :margin 0
       :padding-left 12px
